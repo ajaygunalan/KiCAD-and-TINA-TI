@@ -1,0 +1,282 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Inverting Amp"
+Date "2021-06-10"
+Rev "1.0.0"
+Comp "IIT, BRL, Gneova"
+Comment1 "Ajay Gunalan's First PCB Schematic:"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L invertingAmp:AD711 U?
+U 1 1 60C20855
+P 5500 3600
+F 0 "U?" H 5844 3646 50  0000 L CNN
+F 1 "AD711" H 5844 3555 50  0000 L CNN
+F 2 "" H 5400 3500 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/ca31/ca3130-a.pdf" H 5500 3600 50  0001 C CNN
+	1    5500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60C21385
+P 4850 3500
+F 0 "R?" V 4643 3500 50  0000 C CNN
+F 1 "R" V 4734 3500 50  0000 C CNN
+F 2 "" V 4780 3500 50  0001 C CNN
+F 3 "~" H 4850 3500 50  0001 C CNN
+	1    4850 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60C226B3
+P 5650 3050
+F 0 "R?" V 5443 3050 50  0000 C CNN
+F 1 "R" V 5534 3050 50  0000 C CNN
+F 2 "" V 5580 3050 50  0001 C CNN
+F 3 "~" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60C234CD
+P 5650 4150
+F 0 "C?" V 5398 4150 50  0000 C CNN
+F 1 "C" V 5489 4150 50  0000 C CNN
+F 2 "" H 5688 4000 50  0001 C CNN
+F 3 "~" H 5650 4150 50  0001 C CNN
+	1    5650 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3600 6000 3600
+Wire Wire Line
+	6000 3600 6000 3050
+Wire Wire Line
+	5100 3050 5100 3500
+Wire Wire Line
+	5100 3500 5200 3500
+Wire Wire Line
+	5000 3500 5100 3500
+Connection ~ 5100 3500
+$Comp
+L power:GND #PWR?
+U 1 1 60C255E6
+P 5100 3850
+F 0 "#PWR?" H 5100 3600 50  0001 C CNN
+F 1 "GND" H 5105 3677 50  0000 C CNN
+F 2 "" H 5100 3850 50  0001 C CNN
+F 3 "" H 5100 3850 50  0001 C CNN
+	1    5100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3700 5100 3700
+Wire Wire Line
+	5100 3700 5100 3850
+$Comp
+L power:VSS #PWR?
+U 1 1 60C272B3
+P 5400 4400
+F 0 "#PWR?" H 5400 4250 50  0001 C CNN
+F 1 "VSS" H 5415 4573 50  0000 C CNN
+F 2 "" H 5400 4400 50  0001 C CNN
+F 3 "" H 5400 4400 50  0001 C CNN
+	1    5400 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 60C267BC
+P 5400 2700
+F 0 "#PWR?" H 5400 2550 50  0001 C CNN
+F 1 "VCC" H 5415 2873 50  0000 C CNN
+F 2 "" H 5400 2700 50  0001 C CNN
+F 3 "" H 5400 2700 50  0001 C CNN
+	1    5400 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3050 5500 3050
+Wire Wire Line
+	5800 3050 6000 3050
+Wire Wire Line
+	5400 3900 5400 4150
+$Comp
+L Device:C C?
+U 1 1 60C2DA9A
+P 5000 2750
+F 0 "C?" V 4748 2750 50  0000 C CNN
+F 1 "C" V 4839 2750 50  0000 C CNN
+F 2 "" H 5038 2600 50  0001 C CNN
+F 3 "~" H 5000 2750 50  0001 C CNN
+	1    5000 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 3300 5400 2750
+Wire Wire Line
+	5150 2750 5400 2750
+Connection ~ 5400 2750
+Wire Wire Line
+	5400 2750 5400 2700
+Wire Wire Line
+	5500 4150 5400 4150
+Connection ~ 5400 4150
+Wire Wire Line
+	5400 4150 5400 4400
+$Comp
+L power:GND #PWR?
+U 1 1 60C2F512
+P 4700 2850
+F 0 "#PWR?" H 4700 2600 50  0001 C CNN
+F 1 "GND" H 4705 2677 50  0000 C CNN
+F 2 "" H 4700 2850 50  0001 C CNN
+F 3 "" H 4700 2850 50  0001 C CNN
+	1    4700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C2FA35
+P 5950 4300
+F 0 "#PWR?" H 5950 4050 50  0001 C CNN
+F 1 "GND" H 5955 4127 50  0000 C CNN
+F 2 "" H 5950 4300 50  0001 C CNN
+F 3 "" H 5950 4300 50  0001 C CNN
+	1    5950 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 60C305BE
+P 6450 3600
+F 0 "J?" H 6530 3592 50  0000 L CNN
+F 1 "Output" H 6530 3501 50  0000 L CNN
+F 2 "" H 6450 3600 50  0001 C CNN
+F 3 "~" H 6450 3600 50  0001 C CNN
+	1    6450 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2850 4700 2750
+Wire Wire Line
+	4700 2750 4850 2750
+Wire Wire Line
+	5800 4150 5950 4150
+Wire Wire Line
+	5950 4150 5950 4300
+$Comp
+L power:GND #PWR?
+U 1 1 60C3BE40
+P 6150 3800
+F 0 "#PWR?" H 6150 3550 50  0001 C CNN
+F 1 "GND" H 6155 3627 50  0000 C CNN
+F 2 "" H 6150 3800 50  0001 C CNN
+F 3 "" H 6150 3800 50  0001 C CNN
+	1    6150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3700 6150 3700
+Wire Wire Line
+	6150 3700 6150 3800
+Wire Wire Line
+	6250 3600 6000 3600
+Connection ~ 6000 3600
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 60C3DD53
+P 4200 3500
+F 0 "J?" H 4118 3717 50  0000 C CNN
+F 1 "Output" H 4118 3626 50  0000 C CNN
+F 2 "" H 4200 3500 50  0001 C CNN
+F 3 "~" H 4200 3500 50  0001 C CNN
+	1    4200 3500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3500 4400 3500
+$Comp
+L power:GND #PWR?
+U 1 1 60C40382
+P 4600 3700
+F 0 "#PWR?" H 4600 3450 50  0001 C CNN
+F 1 "GND" H 4605 3527 50  0000 C CNN
+F 2 "" H 4600 3700 50  0001 C CNN
+F 3 "" H 4600 3700 50  0001 C CNN
+	1    4600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3600 4600 3600
+Wire Wire Line
+	4600 3600 4600 3700
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 60C40E45
+P 6900 2750
+F 0 "J?" H 6980 2792 50  0000 L CNN
+F 1 "Bias Connector" H 6980 2701 50  0000 L CNN
+F 2 "" H 6900 2750 50  0001 C CNN
+F 3 "~" H 6900 2750 50  0001 C CNN
+	1    6900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C41C4E
+P 6350 3000
+F 0 "#PWR?" H 6350 2750 50  0001 C CNN
+F 1 "GND" H 6355 2827 50  0000 C CNN
+F 2 "" H 6350 3000 50  0001 C CNN
+F 3 "" H 6350 3000 50  0001 C CNN
+	1    6350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2750 6350 2750
+Wire Wire Line
+	6350 2750 6350 3000
+$Comp
+L power:VCC #PWR?
+U 1 1 60C42482
+P 6600 2500
+F 0 "#PWR?" H 6600 2350 50  0001 C CNN
+F 1 "VCC" H 6615 2673 50  0000 C CNN
+F 2 "" H 6600 2500 50  0001 C CNN
+F 3 "" H 6600 2500 50  0001 C CNN
+	1    6600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 60C42A39
+P 6600 3050
+F 0 "#PWR?" H 6600 2900 50  0001 C CNN
+F 1 "VSS" H 6615 3223 50  0000 C CNN
+F 2 "" H 6600 3050 50  0001 C CNN
+F 3 "" H 6600 3050 50  0001 C CNN
+	1    6600 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6700 2850 6600 2850
+Wire Wire Line
+	6600 2850 6600 3050
+Wire Wire Line
+	6700 2650 6600 2650
+Wire Wire Line
+	6600 2650 6600 2500
+NoConn ~ 5500 3300
+NoConn ~ 5600 3300
+$EndSCHEMATC
